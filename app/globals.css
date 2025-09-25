@@ -1,0 +1,274 @@
+:root {
+  color-scheme: light;
+  font-family: 'Noto Sans JP', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  line-height: 1.6;
+  background-color: #f8fafc;
+  color: #0f172a;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+main.page {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 1.5rem 1.25rem 3rem;
+}
+
+.hero {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.hero h1 {
+  font-size: 1.8rem;
+  margin: 0 0 0.5rem;
+}
+
+.hero p {
+  margin: 0;
+  color: #334155;
+}
+
+.search {
+  background: #ffffff;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+  margin-bottom: 2rem;
+}
+
+.search-form {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.search-control {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.search-control input[type='text'] {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  border-radius: 999px;
+  border: 1px solid #cbd5f5;
+  font-size: 1rem;
+}
+
+.search-control button {
+  padding: 0.75rem 1.5rem;
+  border-radius: 999px;
+  border: none;
+  background: #2563eb;
+  color: #ffffff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.search-control button:disabled {
+  opacity: 0.6;
+  cursor: progress;
+}
+
+.search-control button:not(:disabled):hover,
+.search-control button:not(:disabled):focus {
+  background: #1d4ed8;
+}
+
+.notice,
+.error {
+  margin-top: 0.75rem;
+  font-size: 0.95rem;
+}
+
+.notice {
+  color: #2563eb;
+}
+
+.error {
+  color: #dc2626;
+}
+
+.results .empty {
+  text-align: center;
+  color: #64748b;
+}
+
+.card-list {
+  list-style: none;
+  display: grid;
+  gap: 1.5rem;
+  padding: 0;
+  margin: 0;
+}
+
+.card {
+  background: #ffffff;
+  border-radius: 1rem;
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 1rem;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+}
+
+.card-media .cover-image {
+  width: 100%;
+  height: auto;
+  border-radius: 0.75rem;
+  object-fit: cover;
+  background: #e2e8f0;
+}
+
+.placeholder {
+  width: 100%;
+  padding: 2.5rem 0;
+  text-align: center;
+  border-radius: 0.75rem;
+  background: #e2e8f0;
+  color: #475569;
+  font-size: 0.9rem;
+}
+
+.card-content h2 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.authors {
+  margin: 0.25rem 0;
+  color: #475569;
+}
+
+.summary {
+  margin: 0.5rem 0 0.75rem;
+  color: #334155;
+  font-size: 0.95rem;
+}
+
+.meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+  font-size: 0.9rem;
+  color: #475569;
+}
+
+.holdings {
+  margin-top: 0.75rem;
+  display: grid;
+  gap: 0.5rem;
+}
+
+.holding {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  border-radius: 999px;
+  padding: 0.5rem 0.75rem;
+  background: #e2e8f0;
+  font-size: 0.9rem;
+  flex-wrap: wrap;
+}
+
+.holding .label {
+  font-weight: 600;
+}
+
+.holding a {
+  margin-left: auto;
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.holding a:hover,
+.holding a:focus {
+  text-decoration: underline;
+}
+
+.holding.none {
+  border-radius: 0.75rem;
+  justify-content: center;
+  background: #f1f5f9;
+}
+
+.status-ready {
+  background: rgba(34, 197, 94, 0.15);
+  color: #166534;
+}
+
+.status-inhouse {
+  background: rgba(59, 130, 246, 0.15);
+  color: #1d4ed8;
+}
+
+.status-loaned {
+  background: rgba(249, 115, 22, 0.15);
+  color: #c2410c;
+}
+
+.status-unknown {
+  background: rgba(100, 116, 139, 0.15);
+  color: #475569;
+}
+
+.status-pending {
+  background: rgba(99, 102, 241, 0.15);
+  color: #3730a3;
+}
+
+.footer {
+  margin-top: 2rem;
+  text-align: center;
+  color: #475569;
+}
+
+.footer ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem 1.5rem;
+  margin: 0;
+}
+
+@media (max-width: 720px) {
+  main.page {
+    padding: 1.5rem 1rem 2.5rem;
+  }
+
+  .card {
+    grid-template-columns: 1fr;
+  }
+
+  .card-media {
+    max-width: 200px;
+    margin: 0 auto;
+  }
+
+  .search-control {
+    flex-direction: column;
+  }
+
+  .search-control button {
+    width: 100%;
+  }
+
+  .holding {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .holding a {
+    margin-left: 0;
+  }
+}
