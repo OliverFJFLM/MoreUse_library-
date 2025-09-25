@@ -1,0 +1,33 @@
+{
+  "name": "miyazaki-lib-reco",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "test": "npm run lint && npm run test:unit",
+    "test:unit": "vitest"
+  },
+  "dependencies": {
+    "next": "14.2.5",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "xml2js": "^0.6.2"
+  },
+  "devDependencies": {
+    "@testing-library/dom": "^9.3.4",
+    "@testing-library/jest-dom": "^6.4.5",
+    "@testing-library/react": "^14.2.1",
+    "@types/node": "^20.12.7",
+    "@types/react": "^18.2.47",
+    "@types/react-dom": "^18.2.18",
+    "eslint": "^8.57.0",
+    "eslint-config-next": "14.2.5",
+    "jsdom": "^24.0.0",
+    "typescript": "5.4.5",
+    "vitest": "^1.6.0"
+  }
+}
